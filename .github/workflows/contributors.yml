@@ -8,9 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - uses: actions/checkout@v4
       with:
-        repository: basebom/test2
+        repository: basebom/test1
+        submodules: true
     - uses: BobAnkh/add-contributors@master
       with:
         REPO_NAME: 'basebom/test1'
@@ -19,7 +19,7 @@ jobs:
         ACCESS_TOKEN: ${{secrets.GITHUB_TOKEN}}
         IMG_WIDTH: '100'
         FONT_SIZE: '14'
-        PATH: '/README.md'
+        PATH: '/test2/README.md'
         COMMIT_MESSAGE: 'docs(README): update contributors'
         AVATAR_SHAPE: 'round'
 
