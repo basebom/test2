@@ -8,10 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - run: |
-        git remote add -f test1 https://github.com/basebom/test1.git
-        git fetch test1 --tags
-        git merge --allow-unrelated-histories
+    - run: git subtree add --prefix=test1 https://github.com/basebom/test1.git main
     - uses: BobAnkh/add-contributors@master
       with:
         CONTRIBUTOR: '## Contributors'
