@@ -7,8 +7,9 @@ jobs:
   add-contributors:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - run: git subtree add --prefix=test1 https://github.com/basebom/test1.git main
+    - uses: actions/checkout@v2
+    - name: Add contributors to test2
+      run: git subtree add --prefix=test1 https://github.com/basebom/test1.git main
     - uses: BobAnkh/add-contributors@master
       with:
         CONTRIBUTOR: '## Contributors'
