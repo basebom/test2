@@ -8,9 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - uses: actions/checkout@v4
-      with:
-        repository: basebom/test1
     - run: |
         git remote add test1 https://github.com/basebom/test1.git
         git fetch test1 --tags
