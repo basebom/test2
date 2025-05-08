@@ -12,7 +12,6 @@ jobs:
       with:
         repository: basebom/test1
     - run: |
-        git filter-repo --to-subdirectory-filter basebom/test1
         git remote add project-a https://github.com/basebom/test1.git
         git fetch basebom/test1 --tags
         git merge --allow-unrelated-histories
