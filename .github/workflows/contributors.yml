@@ -12,8 +12,8 @@ jobs:
       with:
         repository: basebom/test1
     - run: |
-        git remote add https://github.com/basebom/test1.git
-        git fetch basebom/test1 --tags
+        git remote add test1 https://github.com/basebom/test1.git
+        git fetch test1 --tags
         git merge --allow-unrelated-histories
     - uses: BobAnkh/add-contributors@master
       with:
