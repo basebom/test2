@@ -10,7 +10,7 @@ jobs:
     - uses: actions/checkout@v4
     - run: |
         git remote add -f test1 https://github.com/basebom/test1.git
-        git fetch test1/main --tags
+        git fetch test1 --tags
         git merge --allow-unrelated-histories
     - uses: BobAnkh/add-contributors@master
       with:
