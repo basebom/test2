@@ -11,7 +11,10 @@ jobs:
     - uses: actions/checkout@v4
       with:
         repository: basebom/test1
-        submodules: true
+    - run: |
+        git remote add project-a basebom/test1
+        git fetch basebom/test1 --tags
+        git merge --allow-unrelated-histories
     - uses: BobAnkh/add-contributors@master
       with:
         REPO_NAME: 'basebom/test1'
